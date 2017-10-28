@@ -412,6 +412,29 @@ static void command_process(int fd, char* command, size_t commandLength) {
             }
         }
 
+        /* SYNC */
+        else if(strcmp(token, "sync") == 0) {
+	    uint8_t sync_value_flag = 0, sync_value = 0;
+
+            token = getTok(NULL, spaceDelim, &err);
+            if(err == 0) {
+		sync_value_flag = 1;
+                // SYNC start value must be 0 to 240, if present
+                sync_value = (uint8_t)getU32(token, 0, 0xF0, &err);
+            }
+	    else {
+                sync_value_flag = 0;
+		err = 0;
+	    }
+
+            lastTok(NULL, spaceDelim, &err);
+
+            if(err == 0) {
+                err = CO_sendSYNC(CO, sync_value_flag, sync_value) ? 1:0;
+                if(err == 0) respLen = sprintf(resp, "[%d] OK", sequence);
+            }
+        }
+
         /* NMT start node */
         else if(strcmp(token, "start") == 0) {
             lastTok(NULL, spaceDelim, &err);
