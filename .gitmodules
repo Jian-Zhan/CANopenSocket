@@ -1,3 +1,7 @@
 [submodule "CANopenNode"]
 	path = CANopenNode
 	url = https://github.com/Jian-Zhan/CANopenNode
+
+[submodule "EDS_Exporter"]
+	path = EDS_Exporter
+	url = https://github.com/Jian-Zhan/CanOpenNodeExporter

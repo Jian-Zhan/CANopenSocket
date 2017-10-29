@@ -1,4 +1,5 @@
 /canopend/app/canopend
+/canopend-slave/app/canopend
 /canopencomm/canopencomm
 /canopencgi/canopen.cgi
 *.o

@@ -435,6 +435,42 @@ static void command_process(int fd, char* command, size_t commandLength) {
             }
         }
 
+        /* Heartbeat monitored nodes query */
+        else if(strcmp(token, "monitored_nodes") == 0) {
+	    uint8_t nodeIdx = 0;
+            char nodeStatus[128]; // TODO: calculate a safe resp buffer size
+
+
+            lastTok(NULL, spaceDelim, &err);
+            if(err == 0) {
+                respLen = snprintf(resp, STRING_BUFFER_SIZE,
+				   "[%d]",
+				   sequence);
+		for (nodeIdx = 0; nodeIdx < CO->HBcons->numberOfMonitoredNodes; nodeIdx++) {
+		    sprintf(nodeStatus, " %2X:%2X",
+	                    CO->HBcons->monitoredNodes[nodeIdx].nodeId,
+	                    CO->HBcons->monitoredNodes[nodeIdx].NMTstate);
+		    strcat(resp, nodeStatus);
+		    respLen += strlen(nodeStatus);
+		}
+		sprintf(nodeStatus, " {All:%d} OK\n",
+	                CO->HBcons->allMonitoredOperational ? 1 : 0);
+		strcat(resp, nodeStatus);
+		respLen += strlen(nodeStatus);
+            }
+        }
+
+        /* Heartbeat monitored nodes query */
+        else if(strcmp(token, "monitored_nodes") == 0) {
+            lastTok(NULL, spaceDelim, &err);
+            if(err == 0) {
+                //err = CO_sendNMTcommand(CO, CO_NMT_ENTER_STOPPED, comm_node) ? 1:0;
+                if(err == 0) respLen = snprintf(resp, STRING_BUFFER_SIZE,
+				                "[%d] OK\n",
+				                sequence);
+            }
+        }
+
         /* NMT start node */
         else if(strcmp(token, "start") == 0) {
             lastTok(NULL, spaceDelim, &err);
