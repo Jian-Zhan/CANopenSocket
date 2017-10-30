@@ -1,5 +1,5 @@
 [FileInfo]
-FileName=CANopenSocket.eds
+FileName=Master.eds
 FileVersion=0
 FileRevision=0
 LastEDS=
@@ -7,7 +7,7 @@ EDSVersion=4.0
 Description=Open Source CANopen implementation
 CreationTime=12:00AM
 CreationDate=01-01-0001
-CreatedBy=JP
+CreatedBy=JZ
 ModificationTime=12:00AM
 ModificationDate=01-01-0001
 ModifiedBy=
@@ -15,7 +15,7 @@ ModifiedBy=
 [DeviceInfo]
 VendorName=CANopenNode
 VendorNumber=0
-ProductName=CANopenNode
+ProductName=Master
 ProductNumber=0
 RevisionNumber=0
 BaudRate_10=1
@@ -35,7 +35,7 @@ GroupMessaging=0
 NrOfRXPDO=16
 NrOfTXPDO=16
 LSS_Supported=0
-;LSS_Type=Server
+;LSS_Type=
 
 [DummyUsage]
 Dummy0001=0
@@ -456,7 +456,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0007
 AccessType=rw
-DefaultValue=0x000407d0
+DefaultValue=0x000407D0
 PDOMapping=0
 
 [1016sub2]
@@ -465,7 +465,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0007
 AccessType=rw
-DefaultValue=0x000507d0
+DefaultValue=0x000507D0
 PDOMapping=0
 
 [1017]
@@ -507,7 +507,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
 AccessType=rw
-DefaultValue=0x01
+DefaultValue=0x00
 PDOMapping=0
 
 [1029sub2]
@@ -516,7 +516,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
 AccessType=rw
-DefaultValue=0x01
+DefaultValue=0x00
 PDOMapping=0
 
 [1029sub3]
@@ -534,7 +534,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
 AccessType=rw
-DefaultValue=0x01
+DefaultValue=0x00
 PDOMapping=0
 
 [1029sub5]
@@ -543,7 +543,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
 AccessType=rw
-DefaultValue=0x01
+DefaultValue=0x00
 PDOMapping=0
 
 [1029sub6]
@@ -552,7 +552,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
 AccessType=rw
-DefaultValue=0x01
+DefaultValue=0x00
 PDOMapping=0
 
 [1200]
@@ -651,7 +651,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0007
 AccessType=rw
-DefaultValue=$NODEID+0x200
+DefaultValue=0x184
 PDOMapping=0
 
 [1400sub2]
@@ -660,7 +660,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
 AccessType=rw
-DefaultValue=255
+DefaultValue=1
 PDOMapping=0
 
 [1401]
@@ -684,7 +684,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0007
 AccessType=rw
-DefaultValue=$NODEID+0x300
+DefaultValue=0x185
 PDOMapping=0
 
 [1401sub2]
@@ -693,7 +693,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
 AccessType=rw
-DefaultValue=254
+DefaultValue=1
 PDOMapping=0
 
 [1402]
@@ -717,7 +717,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0007
 AccessType=rw
-DefaultValue=$NODEID+0x400
+DefaultValue=0x284
 PDOMapping=0
 
 [1402sub2]
@@ -726,7 +726,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
 AccessType=rw
-DefaultValue=254
+DefaultValue=1
 PDOMapping=0
 
 [1403]
@@ -750,7 +750,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0007
 AccessType=rw
-DefaultValue=$NODEID+0x500
+DefaultValue=0x285
 PDOMapping=0
 
 [1403sub2]
@@ -759,7 +759,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
 AccessType=rw
-DefaultValue=254
+DefaultValue=1
 PDOMapping=0
 
 [1404]
@@ -1257,7 +1257,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
 AccessType=rw
-DefaultValue=0
+DefaultValue=2
 PDOMapping=0
 
 [1601sub1]
@@ -1266,7 +1266,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0007
 AccessType=rw
-DefaultValue=0x00000000
+DefaultValue=0x62000308
 PDOMapping=0
 
 [1601sub2]
@@ -1275,7 +1275,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0007
 AccessType=rw
-DefaultValue=0x00000000
+DefaultValue=0x62000408
 PDOMapping=0
 
 [1601sub3]
@@ -1344,7 +1344,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
 AccessType=rw
-DefaultValue=0
+DefaultValue=2
 PDOMapping=0
 
 [1602sub1]
@@ -1353,7 +1353,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0007
 AccessType=rw
-DefaultValue=0x00000000
+DefaultValue=0x62000508
 PDOMapping=0
 
 [1602sub2]
@@ -1362,7 +1362,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0007
 AccessType=rw
-DefaultValue=0x00000000
+DefaultValue=0x62000608
 PDOMapping=0
 
 [1602sub3]
@@ -1431,7 +1431,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
 AccessType=rw
-DefaultValue=0
+DefaultValue=2
 PDOMapping=0
 
 [1603sub1]
@@ -1440,7 +1440,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0007
 AccessType=rw
-DefaultValue=0x00000000
+DefaultValue=0x62000708
 PDOMapping=0
 
 [1603sub2]
@@ -1449,7 +1449,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0007
 AccessType=rw
-DefaultValue=0x00000000
+DefaultValue=0x62000808
 PDOMapping=0
 
 [1603sub3]
@@ -5052,7 +5052,7 @@ ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0007
 AccessType=rw
-DefaultValue=0x00000000
+DefaultValue=0x00000001
 PDOMapping=0
 
 [6000]
@@ -5066,16 +5066,16 @@ ParameterName=max sub-index
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=ro
+AccessType=rw
 DefaultValue=8
-PDOMapping=0
+PDOMapping=1
 
 [6000sub1]
 ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=ro
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5084,7 +5084,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=ro
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5093,7 +5093,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=ro
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5102,7 +5102,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=ro
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5111,7 +5111,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=ro
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5120,7 +5120,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=ro
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5129,7 +5129,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=ro
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5138,7 +5138,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=ro
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5153,16 +5153,16 @@ ParameterName=max sub-index
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=ro
+AccessType=rw
 DefaultValue=8
-PDOMapping=0
+PDOMapping=1
 
 [6200sub1]
 ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=rww
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5171,7 +5171,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=rww
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5180,7 +5180,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=rww
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5189,7 +5189,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=rww
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5198,7 +5198,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=rww
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5207,7 +5207,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=rww
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5216,7 +5216,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=rww
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5225,7 +5225,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=rww
+AccessType=rw
 DefaultValue=0x00
 PDOMapping=1
 
@@ -5240,16 +5240,16 @@ ParameterName=max sub-index
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=ro
+AccessType=rw
 DefaultValue=12
-PDOMapping=0
+PDOMapping=1
 
 [6401sub1]
 ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=ro
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5258,7 +5258,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=ro
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5267,7 +5267,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=ro
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5276,7 +5276,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=ro
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5285,7 +5285,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=ro
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5294,7 +5294,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=ro
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5303,7 +5303,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=ro
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5312,7 +5312,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=ro
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5321,7 +5321,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=ro
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5330,7 +5330,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=ro
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5339,7 +5339,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=ro
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5348,7 +5348,7 @@ ParameterName=Input
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=ro
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5363,16 +5363,16 @@ ParameterName=max sub-index
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0005
-AccessType=ro
+AccessType=rw
 DefaultValue=8
-PDOMapping=0
+PDOMapping=1
 
 [6411sub1]
 ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=rww
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5381,7 +5381,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=rww
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5390,7 +5390,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=rww
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5399,7 +5399,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=rww
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5408,7 +5408,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=rww
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5417,7 +5417,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=rww
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5426,7 +5426,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=rww
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 
@@ -5435,7 +5435,7 @@ ParameterName=Output
 ObjectType=0x7
 ;StorageLocation=RAM
 DataType=0x0003
-AccessType=rww
+AccessType=rw
 DefaultValue=0
 PDOMapping=1
 

@@ -1,5 +1,7 @@
 /canopend/app/canopend
 /canopend-slave/app/canopend
+/canopend/objDict/CO_OD.*
+/canopend-slave/objDict/CO_OD.*
 /canopencomm/canopencomm
 /canopencgi/canopen.cgi
 *.o

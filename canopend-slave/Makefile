@@ -38,10 +38,6 @@ SOURCES =       $(STACKDRV_SRC)/CO_driver.c         \
                 $(OBJ_DICT_SRC)/CO_OD.c             \
                 $(APP_SRC)/application.c
 
-#                $(CANOPEND_SRC)/CO_command.c        \
-#                $(CANOPEND_SRC)/CO_comm_helpers.c   \
-#                $(CANOPEND_SRC)/CO_master.c         \
-
 # canopend is three-threaded application: nonblocking mainline, nonblocking
 # rt-thread and blocking command interface thread.
 # If there is a need to compile canopend as a single-threaded application, then:
@@ -65,8 +61,8 @@ all: $(LINK_TARGET)
 clean:
 	rm -f $(OBJS) $(LINK_TARGET)
 
-$(OBJ_DICT_SRC)/CO_OD.c: $(OBJ_DICT_SRC)/CANopenSocket.eds
-	mono ../EDS_Exporter/CanOpenNodeExporter.exe $(OBJ_DICT_SRC)/CANopenSocket.eds $(OBJ_DICT_SRC)/
+$(OBJ_DICT_SRC)/CO_OD.c: $(OBJ_DICT_SRC)/Slave.eds
+	mono ../EDS_Exporter/CanOpenNodeExporter.exe $< $(OBJ_DICT_SRC)/
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

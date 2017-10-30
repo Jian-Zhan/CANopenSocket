@@ -65,8 +65,8 @@ all: $(LINK_TARGET)
 clean:
 	rm -f $(OBJS) $(LINK_TARGET)
 
-$(OBJ_DICT_SRC)/CO_OD.c: $(OBJ_DICT_SRC)/CANopenSocket.eds
-	mono ../EDS_Exporter/CanOpenNodeExporter.exe $(OBJ_DICT_SRC)/CANopenSocket.eds $(OBJ_DICT_SRC)/
+$(OBJ_DICT_SRC)/CO_OD.c: $(OBJ_DICT_SRC)/Master.eds
+	mono ../EDS_Exporter/CanOpenNodeExporter.exe $< $(OBJ_DICT_SRC)/
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

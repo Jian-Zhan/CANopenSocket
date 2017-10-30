@@ -75,11 +75,11 @@
 
 /*******************************************************************************
    FILE INFO:
-      FileName:     CANopenSocket.eds
+      FileName:     Master.eds
       FileVersion:  0
       CreationTime: 12:00AM
       CreationDate: 01-01-0001
-      CreatedBy:    JP
+      CreatedBy:    JZ
 ******************************************************************************/
 
 
@@ -87,7 +87,7 @@
    DEVICE INFO:
       VendorName:     CANopenNode
       VendorNumber    0
-      ProductName:    CANopenNode
+      ProductName:    Master
       ProductNumber:  0
 ******************************************************************************/
 
